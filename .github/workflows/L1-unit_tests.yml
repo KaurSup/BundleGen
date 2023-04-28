@@ -50,7 +50,7 @@ jobs:
           echo $GOPATH
           find $HOME/ -type d -name "umoci"
           #cd $GOPATH/src/github.com/opencontainers/umoci/
-          cd $GOPATH/pkg/mod/github.com/opencontainers/umoci/
+          cd $GOPATH/pkg/mod/github.com/opencontainers/umoci@v0.4.7/cmd/umoci/
           echo $(ls)
           make
           sudo make install
