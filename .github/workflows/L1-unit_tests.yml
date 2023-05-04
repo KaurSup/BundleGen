@@ -45,13 +45,9 @@ jobs:
           echo "Printing GO version "
           go version
           GOPATH=$HOME/go
-          #go get -d github.com/opencontainers/umoci
-          go mod download github.com/opencontainers/umoci@latest
-          echo $GOPATH
-          find $HOME/ -type d -name "umoci"
-          #cd $GOPATH/src/github.com/opencontainers/umoci/
-          #cd $GOPATH/pkg/mod/github.com/opencontainers/umoci@v0.4.7/cmd/umoci/
-          cd $GOPATH/pkg/mod/cache/download/github.com/opencontainers/umoci
+          cd $GOPATH
+          git clone https://github.com/opencontainers/umoci.git
+          cd $GOPATH/umoci
           echo $(ls)
           make
           sudo make install
