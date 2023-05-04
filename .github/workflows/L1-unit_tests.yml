@@ -56,8 +56,7 @@ jobs:
       - name: Run the unit test
         working-directory: ./Bundlegen/unit_tests/L1_testing
         run: |
-            #python run_L1_test.py -c coverage_report
-            python run_L1_test.py
+            python run_L1_test.py -c coverage_report
 
       - name: Upload artifacts
         uses: actions/upload-artifact@v3
